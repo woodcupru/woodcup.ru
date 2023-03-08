@@ -1,9 +1,6 @@
 # BERЁZKA
 Once upon day we finished another cup of coffee, threw it away, and thought: How many people on the planet do this every day? How many hundreds of millions of cups lie in landfills around the world? In how many billions of years will they disintegrate? They thought about it and decided to make another cup.
 
-# BERЁZKA
-Once upon day we finished another cup of coffee, threw it away, and thought: How many people on the planet do this every day? How many hundreds of millions of cups lie in landfills around the world? In how many billions of years will they disintegrate? They thought about it and decided to make another cup.
-
 [![](pic/bg.jpeg)](pic/bg.jpeg)
 
 ## We made dishes that don't harm
@@ -11,6 +8,8 @@ Our cups, lids, forks and plates are special. We make them from sawdust and biop
 
 ## What makes our tableware unique?
 It contains no petrochemicals at all, not even polypropylene. Polypropylene is added to natural compositions like starch, so that the raw material does not fall apart when exposed to high temperatures. For the most part, this is how «eco-friendly» cookware is made in Russia. But this is not saving the planet. Polypropylene takes the same 500 years to decompose as large particles of plastic. But it ends up in our lungs, and cannot be collected and recycled.
+
+[![](pic/cycle.jpeg)](pic/cycle.jpeg)
 
 ## Get in touch
 We'll tell you everything! (Well, almost everything ;))
