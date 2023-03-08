@@ -5,4 +5,8 @@ Our cups, lids, forks and plates are special. We make them from sawdust and biop
 
 ## Get in touch
 We'll tell you everything! (Well, almost everything ;))
-E-Mail: info@woodcup.ru
+E-Mail: [info@woodcup.ru]
+
+
+
+ [info@woodcup.ru]: <mailto:semenov.int@gmail.com>
