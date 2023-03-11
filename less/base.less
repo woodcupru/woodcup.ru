@@ -1,0 +1,118 @@
+// main: main.less
+
+* {
+   -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #ffeaa7;
+}
+
+
+@baseFontSize: 18; 
+@baseLineHeight: 1.3; 
+@leading: @baseLineHeight * 1rem;
+@sans:'PT Sans', Helvetica, Arial, sans-serif;
+@narrow:'PT Sans Narrow', Helvetica, Arial, sans-serif;
+@serif:'PT Serif', Georgia, 'Times New Roman', Times, serif;
+@mono:'PT Mono', monospace;
+@logo: 'Noto Serif Display', serif;
+
+
+// @scale: 1.414;
+@scale: 1.333;
+
+
+html {
+  font-family: @sans;
+  font-size: @baseFontSize / 16 * 100%;
+  -webkit-font-smoothing: antialiased;   
+    
+  color: @darkgray;
+}
+
+a {
+    .animation(0.4s);
+    color: @blue;
+    &:hover {color: @red;}
+    &:active {color: @linkactive;}
+    text-decoration-skip: ink;
+    &[href*='#'] {
+        text-decoration: none;
+        border-bottom: 1px dashed @blue;
+    }
+}
+
+
+p {
+  line-height: @leading;
+  margin-top: @leading;
+  margin-bottom: 0;
+  hyphens: auto;
+}
+
+ul, ol {
+  margin-top: @leading;
+  margin-bottom: @leading;
+
+  li {
+    line-height: @leading;
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+blockquote {
+  line-height: @leading;
+  margin-top: @leading;
+  margin-bottom: @leading;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @sans;
+  margin-top: @leading;
+  margin-bottom: 0;
+  line-height: @leading;
+}
+
+h1 { font-size: 3 * @scale * 1rem; line-height: 3 * @leading; margin-top: 2 * @leading; }
+h2 { font-size: 2 * @scale * 1rem; line-height: 2 * @leading; margin-top: 2 * @leading; }
+h3 { font-size: 1 * @scale * 1rem; }
+h4 { font-size: @scale / 1 * 1rem; }
+h5 { font-size: @scale / 2 * 1rem; }
+h6 { font-size: @scale / 3 * 1rem; }
+
+table {
+  margin-top: @leading;
+  border-spacing: 0px;
+  border-collapse: collapse;
+
+  td, th {
+    padding: 0;
+    line-height: @baseLineHeight * @baseFontSize - 0px;
+  }
+}
+
+
+code {
+  vertical-align: bottom;
+}
+
+/* Leading paragraph text */
+.lead {
+  font-size: @scale * 1rem;
+}
+
+/* Hug a the block above you */
+.hug {
+  margin-top: 0;
+}
+
+
