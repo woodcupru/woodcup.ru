@@ -494,7 +494,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40vh;
+  margin: 10vh 0;
   overflow: hidden;
 }
 .main-container .youtube:before {
