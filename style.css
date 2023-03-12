@@ -711,15 +711,14 @@ code {
   color: #000;
 }
 .main-container .card_name .card_job {
-  font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  padding-bottom: 0.3em;
+  font-weight: normal;
+  color: #222;
+  font-size: 0.8em;
 }
 .main-container .card_name .card_decr {
   color: #2d3436;
 }
 .main-container .card_name .card_link {
-  font-size: 0.8em;
   display: inline-block;
 }
 .main-container .card_name .card_link a {
