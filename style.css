@@ -327,6 +327,36 @@ code {
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
+#top_nav .logo span {
+  position: relative;
+}
+@keyframes dropHeader {
+  0% {
+    top: 100px;
+    left: 700%;
+  }
+  100% {
+    top: -15px;
+    left: 100%;
+  }
+}
+#top_nav .logo span:before {
+  position: absolute;
+  transition: all 2s ease-in-out;
+  top: -15px;
+  left: 100%;
+  width: 30px;
+  height: 30px;
+  content: ' ';
+  background-image: url(pic/bee.svg);
+  background-size: 30px 30px;
+  background-position: right top;
+  background-repeat: no-repeat;
+  animation-name: dropHeader;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+}
 #top_nav.bg-head .logo {
   opacity: 0;
 }
