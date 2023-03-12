@@ -361,7 +361,7 @@ code {
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
-  color: #fff;
+  color: #222;
 }
 .header-container .full_bg {
   position: relative;
@@ -379,7 +379,7 @@ code {
   text-transform: uppercase;
 }
 .header-container .full_bg .description {
-  font-size: 1.6em;
+  font-size: 1.5em;
 }
 .header-container:before {
   content: ' ';
@@ -388,7 +388,7 @@ code {
   right: 0;
   left: 0;
   top: 0;
-  background-color: #222f3e;
+  background-color: #ffeaa7;
   opacity: 0.6;
   z-index: 1;
 }
