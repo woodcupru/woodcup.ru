@@ -447,7 +447,7 @@ code {
   width: 100%;
 }
 .main-container .first_textblock {
-  padding: 35vh 0;
+  padding: 35vh 0 10vh;
   background-image: url(pic/textblock1.png);
   background-position: top right;
   background-repeat: no-repeat;
@@ -524,7 +524,7 @@ code {
   }
 }
 .main-container .sec_textblock {
-  padding: 35vh 0;
+  padding: 20vh 0;
 }
 .main-container .sec_textblock .sec_textblock-title {
   font-size: 5.33em;
