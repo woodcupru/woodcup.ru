@@ -70,13 +70,8 @@
     }
     
     #switch_top {
-     //   text-align: center;
         .upper(1.5em);
         font-family: @mono;
-        // span {
-        //     // &:lang(en) {}
-        //     // &:lang(ru) {}
-        // }
     }    
     
 &.bg-light, 
@@ -130,6 +125,16 @@
          .description {
             font-size: 1.5em;
          }
+
+         .max(48em, {
+            .logo { 
+                font-size: 3em;
+                .upper(1.6em); 
+            }
+            .description {
+                font-size: 1em;
+             }
+         });
    
     } 
 
@@ -164,12 +169,15 @@
         background-repeat: no-repeat;
         background-size: 75vh;
 
+        .max(48em, {background-image: url('');  });
+
+        
         .first_textblock-title {
             font-size: 5.33em;
             font-family: @serif;
             line-height: 1;
-            .max(440px, {
-                font-size: 24px;
+            .max(48em, {
+                font-size: 3em;
             })
         }
         .first_textblock-discr {
@@ -177,9 +185,6 @@
             font-size: 1.5em;
             line-height: 1.2;
             margin-top: 1.2em;
-            .max(440px, {
-                font-size: 14px;
-            })
         }
     }
 
@@ -192,8 +197,9 @@
         background-size: contain;
         position: relative;
 
-        .max(440px, {
+        .max(48em, {
             min-height: 40vh;
+            background-image: url('');
         });
 
         &:before{
@@ -204,9 +210,10 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
-            .max(440px, {
+            .max(48em, {
                 z-index: -1;
                 opacity: 0.6;
+                position: relative;
             });
         }
         display: flex;
@@ -224,7 +231,7 @@
             .max(750px, {
                 font-size: 24px;
                 width: 100%;
-            })
+            });
         }
     }
 
@@ -235,9 +242,9 @@
             font-size: 5.33em;
             font-family: @serif;
             line-height: 1;
-         .max(440px, {
-                font-size: 24px;
-            })   
+         .max(48em, {
+                font-size: 3em;
+            });   
         }
         .sec_textblock-bgc {
             position: relative;
@@ -249,6 +256,10 @@
                 position: absolute;
                 right: 0;left: 0; top: -10vh;
                 z-index: -1;
+                .max(48em, {
+                    display: none;
+                }); 
+                
             }
         } 
         .sec_textblock-discr {
@@ -259,7 +270,7 @@
             background-color: #fff;
             padding: 1em;
             border-radius: 1em;
-            .max(440px, {
+            .max(48em, {
                 font-size: 16px;
             })
         }
@@ -289,8 +300,8 @@
         font-size: 5.33em;
         font-family: @serif;
         line-height: 1;
-        .max(440px, {
-            font-size: 32px;
+        .max(48em, {
+            font-size: 3em;
         });
     }   
  }

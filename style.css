@@ -423,6 +423,17 @@ code {
 .header-container .full_bg .description {
   font-size: 1.5em;
 }
+@media (max-width: 47em) {
+  .header-container .full_bg .logo {
+    font-size: 3em;
+    font-size: 1.6em;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+  .header-container .full_bg .description {
+    font-size: 1em;
+  }
+}
 .header-container:before {
   content: ' ';
   position: absolute;
@@ -453,14 +464,19 @@ code {
   background-repeat: no-repeat;
   background-size: 75vh;
 }
+@media (max-width: 47em) {
+  .main-container .first_textblock {
+    background-image: url('');
+  }
+}
 .main-container .first_textblock .first_textblock-title {
   font-size: 5.33em;
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   line-height: 1;
 }
-@media (max-width: 439px) {
+@media (max-width: 47em) {
   .main-container .first_textblock .first_textblock-title {
-    font-size: 24px;
+    font-size: 3em;
   }
 }
 .main-container .first_textblock .first_textblock-discr {
@@ -468,11 +484,6 @@ code {
   font-size: 1.5em;
   line-height: 1.2;
   margin-top: 1.2em;
-}
-@media (max-width: 439px) {
-  .main-container .first_textblock .first_textblock-discr {
-    font-size: 14px;
-  }
 }
 .main-container .cycle_textblock {
   min-height: 100vh;
@@ -487,9 +498,10 @@ code {
   justify-content: center;
   align-content: center;
 }
-@media (max-width: 439px) {
+@media (max-width: 47em) {
   .main-container .cycle_textblock {
     min-height: 40vh;
+    background-image: url('');
   }
 }
 .main-container .cycle_textblock:before {
@@ -504,10 +516,11 @@ code {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media (max-width: 439px) {
+@media (max-width: 47em) {
   .main-container .cycle_textblock:before {
     z-index: -1;
     opacity: 0.6;
+    position: relative;
   }
 }
 .main-container .cycle_textblock .cycle_textblock-dcs {
@@ -531,9 +544,9 @@ code {
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   line-height: 1;
 }
-@media (max-width: 439px) {
+@media (max-width: 47em) {
   .main-container .sec_textblock .sec_textblock-title {
-    font-size: 24px;
+    font-size: 3em;
   }
 }
 .main-container .sec_textblock .sec_textblock-bgc {
@@ -549,6 +562,11 @@ code {
   top: -10vh;
   z-index: -1;
 }
+@media (max-width: 47em) {
+  .main-container .sec_textblock .sec_textblock-bgc img {
+    display: none;
+  }
+}
 .main-container .sec_textblock .sec_textblock-discr {
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   font-size: 1.5em;
@@ -558,7 +576,7 @@ code {
   padding: 1em;
   border-radius: 1em;
 }
-@media (max-width: 439px) {
+@media (max-width: 47em) {
   .main-container .sec_textblock .sec_textblock-discr {
     font-size: 16px;
   }
@@ -587,9 +605,9 @@ code {
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   line-height: 1;
 }
-@media (max-width: 439px) {
+@media (max-width: 47em) {
   .main-container .contacts .team-title {
-    font-size: 32px;
+    font-size: 3em;
   }
 }
 .main-container .card {
