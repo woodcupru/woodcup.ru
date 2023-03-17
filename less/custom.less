@@ -482,6 +482,7 @@
         height: 35vh;
         margin-bottom: 1%;
         text-decoration: none;
+        overflow: hidden;
 
         position: relative;
 
@@ -521,13 +522,42 @@
             top: 0;bottom: 0;right: 0;left: 0;
             background-color: rgba(0, 0, 0, .6);
             z-index: 2;
+            transition: all 0.5s;
         }
 
         &:hover::before {
             background-color: rgba(0, 0, 0, .2);
         }
 
+        &.video {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+           &::after {
+                content: "\e909";
+                font-family: 'icomoon' !important;
+                speak: never;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+
+                transition: all 0.5s;
+                font-size: 2em;
+                color: #fff;
+                z-index: 9;
+           } 
+           &:hover::after {
+            font-size: 3.2em;
+           }
+          }
+        } 
+
     }
-}
+
 
 

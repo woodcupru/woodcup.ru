@@ -754,6 +754,7 @@ code {
   height: 35vh;
   margin-bottom: 1%;
   text-decoration: none;
+  overflow: hidden;
   position: relative;
 }
 .gallery .item:nth-child(6n+1) {
@@ -792,9 +793,34 @@ code {
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 2;
+  transition: all 0.5s;
 }
 .gallery .item:hover::before {
   background-color: rgba(0, 0, 0, 0.2);
+}
+.gallery .item.video {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery .item.video::after {
+  content: "\e909";
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.5s;
+  font-size: 2em;
+  color: #fff;
+  z-index: 9;
+}
+.gallery .item.video:hover::after {
+  font-size: 3.2em;
 }
 .ovfh {
   overflow-y: hidden;
