@@ -56,6 +56,14 @@ $('.image-popup').magnificPopup({
 		fixedContentPos: false
 	});
 
+
+var list = document.getElementsByClassName('item');
+
+for (var i = 0; i < list.length; i++) {
+  var src = list[i].getAttribute('data-src');
+  list[i].style.backgroundImage="url('" + src + "')";
+}
+
  
  
 $('#switch-lang').css({'pointer-events':'none',
