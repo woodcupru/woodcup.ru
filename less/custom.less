@@ -288,6 +288,11 @@
         justify-content: center;
         align-content: center;
 
+        @background: #005;
+        @primary: #ffbe76;
+        @secondary: #6ab04c;
+        @third: #badc58;
+
         &:before{
             content: '';
             position: absolute;
@@ -295,6 +300,10 @@
             background-color: #93D283;
             border-radius: 70% 30% 30% 69% / 60% 48% 60% 40%;
             z-index: -1;
+
+  // background: linear-gradient(45deg, @primary 0%, @secondary 100%);
+  animation: morph 8s ease-in-out infinite;
+  transition: all 1s ease-in-out;
         }
     .team-title {
         font-size: 5.33em;
@@ -303,7 +312,23 @@
         .max(48em, {
             font-size: 3em;
         });
-    }   
+    }
+    
+    
+    @keyframes morph {
+        0% {
+          border-radius: 70% 30% 30% 69% / 60% 48% 60% 40%;
+          //background: linear-gradient(45deg, @primary 0%, @secondary 100%);
+        }
+        50% {
+          border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+          //background: linear-gradient(45deg, @third 0%, @secondary 100%);
+        }
+        100% {
+          border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+          //background: linear-gradient(45deg, @primary 0%, @secondary 100%);
+        }
+      }
  }
 
 

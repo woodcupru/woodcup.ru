@@ -6,6 +6,10 @@ $.fn.exists = function(callback) {
   return this;
 };
 
+function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
 
 $(document).ready(function() {
     
@@ -58,11 +62,26 @@ $('.image-popup').magnificPopup({
 
 
 var list = document.getElementsByClassName('item');
-
 for (var i = 0; i < list.length; i++) {
+
+  // a = getRandom(30, 70) + '% ';
+  // b = getRandom(30, 70) + '% ';
+  // c = getRandom(30, 70) + '% ';
+  // d = getRandom(30, 70) + '% ';
+
+  // e = getRandom(30, 70) + '% ';
+  // f = getRandom(30, 70) + '% ';
+  // g = getRandom(30, 70) + '% ';
+  // h = getRandom(30, 70) + '%';
+
   var src = list[i].getAttribute('data-src');
   list[i].style.backgroundImage="url('" + src + "')";
+  // list[i].style.borderRadius = a+b+c+d+'/'+e+f+g+h;
+
 }
+
+
+
 
  
  
