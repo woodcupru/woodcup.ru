@@ -599,6 +599,7 @@ code {
   background-color: #93D283;
   border-radius: 70% 30% 30% 69% / 60% 48% 60% 40%;
   z-index: -1;
+  background: linear-gradient(45deg, #ffbe76 0%, #6ab04c 100%);
   animation: morph 8s ease-in-out infinite;
   transition: all 1s ease-in-out;
 }
@@ -620,7 +621,7 @@ code {
     border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
   }
   100% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    border-radius: 70% 30% 30% 69% / 60% 48% 60% 40%;
   }
 }
 .main-container .card {
