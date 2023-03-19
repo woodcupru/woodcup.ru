@@ -80,8 +80,21 @@ for (var i = 0; i < list.length; i++) {
 
 }
 
+var card_bg = document.getElementsByClassName('card_bg');
+for (var i = 0; i < card_bg.length; i++) {
 
+  a = getRandom(30, 70) + '% ';
+  b = getRandom(30, 70) + '% ';
+  c = getRandom(30, 70) + '% ';
+  d = getRandom(30, 70) + '% ';
 
+  e = getRandom(30, 70) + '% ';
+  f = getRandom(30, 70) + '% ';
+  g = getRandom(30, 70) + '% ';
+  h = getRandom(30, 70) + '%';
+
+  card_bg[i].style.borderRadius = a+b+c+d+'/'+e+f+g+h;
+}
 
  
  
