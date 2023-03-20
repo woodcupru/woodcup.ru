@@ -779,28 +779,28 @@ code {
   overflow: hidden;
   position: relative;
 }
-.gallery .item:nth-child(8n+1) {
+.gallery .item:nth-child(8n+4) {
   width: 28%;
 }
-.gallery .item:nth-child(8n+2) {
-  width: 20%;
-}
-.gallery .item:nth-child(8n+3) {
-  width: 30%;
-}
-.gallery .item:nth-child(8n+4) {
-  width: 20%;
-}
 .gallery .item:nth-child(8n+5) {
-  width: 31%;
+  width: 20%;
 }
 .gallery .item:nth-child(8n+6) {
-  width: 20%;
+  width: 30%;
 }
 .gallery .item:nth-child(8n+7) {
-  width: 25%;
+  width: 20%;
 }
 .gallery .item:nth-child(8n+8) {
+  width: 31%;
+}
+.gallery .item:nth-child(8n+9) {
+  width: 20%;
+}
+.gallery .item:nth-child(8n+10) {
+  width: 25%;
+}
+.gallery .item:nth-child(8n+11) {
   width: 22%;
 }
 .gallery .item:nth-child(1) {
