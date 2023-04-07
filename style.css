@@ -433,20 +433,33 @@ code {
 }
 .main-container .first_textblock {
   padding: 35vh 0 10vh;
-  background-image: url(pic/textblock1.png);
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-size: 75vh;
+  position: relative;
 }
 @media (max-width: 47em) {
   .main-container .first_textblock {
     background-image: url('');
   }
 }
+.main-container .first_textblock:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(pic/textblock2.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  opacity: 0.3;
+}
 .main-container .first_textblock .first_textblock-title {
   font-size: 5.33em;
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   line-height: 1;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 47em) {
   .main-container .first_textblock .first_textblock-title {
@@ -840,7 +853,6 @@ code {
 .gallery .item.video::after {
   content: "\e909";
   font-family: 'icomoon' !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
