@@ -362,19 +362,16 @@ code {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-color: #2e251c;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-image: url(pic/side_bg.jpeg);
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
+  background-position: 20% 0;
+  background-size: contain;
+  background-image: url(pic/title_blub.png);
   display: flex;
   align-items: center;
-  align-content: flex-start;
-  justify-content: center;
+  align-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   color: #222;
   color: #fff;
@@ -382,42 +379,56 @@ code {
 .header-container .full_bg {
   position: relative;
   z-index: 2;
-  width: 100%;
-  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20vh;
 }
 .header-container .full_bg .logo {
   font-size: 2em;
   letter-spacing: 0.4em;
   font-family: 'Noto Serif Display', serif;
-  font-size: 3em;
-  letter-spacing: 0.6em;
-  margin-left: 0.6em;
+  font-size: 4em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 .header-container .full_bg .description {
   font-size: 1.5em;
 }
 @media (max-width: 47em) {
+  .header-container .full_bg {
+    margin-bottom: 0;
+  }
   .header-container .full_bg .logo {
     font-size: 3em;
     font-size: 1.6em;
     letter-spacing: 0.32em;
     text-transform: uppercase;
+    color: #222;
   }
   .header-container .full_bg .description {
     font-size: 1em;
+    color: #222;
   }
 }
 .header-container:before {
+  content: ' ';
   position: absolute;
-  bottom: 0;
+  width: 100%;
+  height: 80vh;
   right: 0;
-  left: 0;
   top: 0;
-  background-color: #ffeaa7;
-  background-color: #238605;
-  opacity: 0.3;
-  z-index: 1;
+  z-index: 3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-position: 100% 0;
+  background-size: contain;
+  background-image: url(pic/bhand.png);
+}
+@media (max-width: 47em) {
+  .header-container:before {
+    height: 20vh;
+  }
 }
 .header-container .lkly {
   position: absolute;
@@ -428,31 +439,62 @@ code {
   text-align: center;
   z-index: 3;
 }
+@media (max-width: 47em) {
+  .header-container {
+    height: 80vh;
+  }
+}
 .main-container {
   width: 100%;
+  position: relative;
+}
+.main-container .bgimg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+.main-container .bgimg img {
+  width: 100%;
+  max-height: 100vh;
+}
+.main-container .bgimg::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-position: 50% 0;
+  background-size: 40vh;
+  background-image: url(pic/forest.png);
+}
+@media (max-width: 47em) {
+  .main-container .bgimg::before {
+    background-size: 30vh;
+  }
 }
 .main-container .first_textblock {
   padding: 35vh 0 10vh;
   position: relative;
+  z-index: 2;
+}
+.main-container .first_textblock block {
+  z-index: 2;
 }
 @media (max-width: 47em) {
   .main-container .first_textblock {
     background-image: url('');
   }
-}
-.main-container .first_textblock:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url(pic/textblock2.png);
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 1;
-  opacity: 0.3;
 }
 .main-container .first_textblock .first_textblock-title {
   font-size: 5.33em;
@@ -471,6 +513,7 @@ code {
   font-size: 1.5em;
   line-height: 1.2;
   margin-top: 1.2em;
+  z-index: 2;
 }
 .main-container .cycle_textblock {
   min-height: 100vh;
