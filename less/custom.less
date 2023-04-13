@@ -14,7 +14,9 @@
     padding: 1em 0;
     color: @darkgray;
     
-    .max(48em, {font-size: 0.6em;});
+    .max(48em, {
+        font-size: 0.6em;
+    });
     
     .logo {
         font-family: @logo;
@@ -24,10 +26,7 @@
 
          span {
             position: relative;
-           // background-color: rgba(255, 255, 255, .2);
-           // padding: 0 1em;
         }
-
     }
     
     &.bg-head {
@@ -47,16 +46,19 @@
         font-family: @mono;
     }    
     
-&.bg-light{
-    color: @darkgray;
-    a {color: @darkgray;} 
-    }
-&.bg-dark, 
-&.bg-head   { 
-    color: @lightgray;
-    a {color: @lightgray;} 
-    }
-    
+    &.bg-light{
+            color: @darkgray;
+            span {
+                color: @darkgray;
+            } 
+        }
+    &.bg-dark, 
+    &.bg-head   { 
+            color: @white;
+            span {
+                color: @white;
+            } 
+        }  
 }
 
 
@@ -292,10 +294,7 @@
         .sec_textblock-title {
             font-size: 5.33em;
             font-family: @serif;
-            line-height: 1;
-         .max(48em, {
-                font-size: 3em;
-            });   
+            line-height: 1;  
         }
         .sec_textblock-bgc {
             position: relative;
@@ -303,16 +302,12 @@
             img {
                 display: block;
                 width: 100%;
-
                 position: absolute;
-                right: 0;left: 0; top: -10vh;
-                z-index: -1;
-                .max(48em, {
-                    display: none;
-                }); 
-                
+                right: 0;left: 0; top: -15vh;
+                z-index: -1;                
             }
         } 
+
         .sec_textblock-discr {
             font-family: @serif;
             font-size: 1.5em;
@@ -321,11 +316,30 @@
             background-color: #fff;
             padding: 1em;
             border-radius: 1em;
-            .max(48em, {
-                font-size: 16px;
-            })
         }
-    }
+
+    .max(48em, {
+        .sec_textblock-title { 
+            font-size: 3em;
+            position: relative;
+            z-index: 3;
+            line-height: 1.32;
+            span {
+                background-color: rgba(255,255,255,.7);
+            }
+        }
+        .sec_textblock-bgc {
+            img {
+              z-index: 1;
+            }
+        }  
+        .sec_textblock-discr  {
+            font-size: 24px;
+            background-color: rgba(255,255,255,.0);
+            padding: 0.2em;
+        } 
+    });
+}
 
     
   
@@ -345,19 +359,25 @@
         &:before{
             content: '';
             position: absolute;
-            top: -3em;bottom: -3em;right: -3em;left: -3em;
+            top: -3em;bottom: -3em;
+            right: -3em;left: -3em;
+
             background-color: #93D283;
             border-radius: 70% 30% 30% 69% / 60% 48% 60% 40%;
-            z-index: -1;
+            z-index: 1;
 
-  background: linear-gradient(45deg, @primary 0%, @secondary 100%);
-  animation: morph 8s ease-in-out infinite;
-  transition: all 1s ease-in-out;
+            background: linear-gradient(45deg, @primary 0%, @secondary 100%);
+            animation: morph 8s ease-in-out infinite;
+            transition: all 1s ease-in-out;
         }
+
     .team-title {
+        position: relative;
+        z-index: 2;
         font-size: 5.33em;
         font-family: @serif;
         line-height: 1;
+
         .max(48em, {
             font-size: 3em;
         });
@@ -367,15 +387,12 @@
     @keyframes morph {
         0% {
           border-radius: 70% 30% 30% 69% / 60% 48% 60% 40%;
-          //background: linear-gradient(45deg, @primary 0%, @secondary 100%);
         }
         50% {
           border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-          //background: linear-gradient(45deg, @third 0%, @secondary 100%);
         }
         100% {
           border-radius: 70% 30% 30% 69% / 60% 48% 60% 40%;
-          //background: linear-gradient(45deg, @primary 0%, @secondary 100%);
         }
       }
  }
@@ -383,7 +400,7 @@
 
     .card {
         padding: 2em;
-        .max(440px, {
+        .max(48em, {
             padding: 10px;
         });
         &_pic {
@@ -394,14 +411,8 @@
             .card_bg {
                 position: absolute;
                 top: 0;bottom: 0;right: 0;left: 0;
-                background-color: @gray;
-                
+                background-color: @gray;              
                 overflow: hidden;
-                box-shadow: 3px 3px 33px #ddd;
-                // border-top-left-radius: 62%;
-                // border-top-right-radius: 50%;
-                // border-bottom-left-radius: 52%;
-                // border-bottom-right-radius: 59%;
                 
                 &::before {
                     content: ' ';
@@ -440,21 +451,15 @@
                 font-size: 1.2em;
                 padding-bottom: 0.3em;
                 color: #000;
-
-
             } 
             .card_job {
-              //  font-family: @narrow;
                 font-weight: normal;
                 color: #222;
                 font-size: 0.8em;
-               // padding-bottom: 0.3em;
             } 
             .card_decr {color:@darkgray;} 
             
             .card_link {
-               // font-size: 0.8em;
-                //padding: 1.2em 0;
                 display: inline-block;
                 a {
                     text-decoration: none;
