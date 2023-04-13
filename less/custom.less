@@ -164,7 +164,10 @@
         align-items: center;
         justify-content: stretch;
 
-        img {width: 100%;max-height: 100vh;}
+        img {
+            width: 100%;
+            max-height: 100vh;
+        }
 
         &::before {
             content: ' ';
@@ -175,11 +178,17 @@
             background-position: 50% 0;
             background-size: 40vh;
             background-image: url(pic/forest.png);
-
-            .max(48em, {
-                background-size: 30vh;
-             });
         }
+
+        .max(48em, {
+            &::before {
+               background-size: auto 72vw; 
+            }
+            img {
+                width: auto;
+                max-height: 150vh;  
+            }
+        });
     }
 
 
@@ -192,8 +201,6 @@
         & block {
             z-index: 2;
         }
-
-        .max(48em, {background-image: url(''); });
        
         .first_textblock-title {
             font-size: 5.33em;
@@ -201,10 +208,6 @@
             line-height: 1;
             position: relative;
             z-index: 2;
-            .max(48em, {
-                font-size: 3em;
-            });
-
         }
         .first_textblock-discr {
             font-family: @serif;
@@ -213,6 +216,12 @@
             margin-top: 1.2em;
             z-index: 2;
         }
+
+        .max(48em, {
+            .first_textblock-title {
+                font-size: 3em;
+            }
+        });
     }
 
     .cycle_textblock {
@@ -224,11 +233,6 @@
         background-size: contain;
         position: relative;
 
-        .max(48em, {
-            min-height: 40vh;
-            background-image: url('');
-        });
-
         &:before{
             content: '';
             position: absolute;
@@ -237,11 +241,6 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
-            .max(48em, {
-                z-index: -1;
-                opacity: 0.6;
-                position: relative;
-            });
         }
         display: flex;
         align-items: center;
@@ -254,12 +253,37 @@
             font-size: 1.5em;
             line-height: 1.2;
             margin-top: 1.2em;
+        }
 
-            .max(750px, {
+        
+        .max(48em, {
+            min-height: 40vh;
+            background-size: cover;
+            flex-wrap: wrap;
+
+            &:before{ 
+                z-index: 1;
+                // opacity: 0.6;
+                position: relative;
+                width: 100%;
+                height: 75vw;
+                background-size: cover;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: @sans;
+                font-size: 1.5em;
+                content: 'Life cycle';
+            }
+
+            .cycle_textblock-dcs {
                 font-size: 24px;
                 width: 100%;
-            });
-        }
+            }
+        });
+
+
     }
 
     .sec_textblock {

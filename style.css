@@ -482,7 +482,11 @@ code {
 }
 @media (max-width: 47em) {
   .main-container .bgimg::before {
-    background-size: 30vh;
+    background-size: auto 72vw;
+  }
+  .main-container .bgimg img {
+    width: auto;
+    max-height: 150vh;
   }
 }
 .main-container .first_textblock {
@@ -493,11 +497,6 @@ code {
 .main-container .first_textblock block {
   z-index: 2;
 }
-@media (max-width: 47em) {
-  .main-container .first_textblock {
-    background-image: url('');
-  }
-}
 .main-container .first_textblock .first_textblock-title {
   font-size: 5.33em;
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
@@ -505,17 +504,17 @@ code {
   position: relative;
   z-index: 2;
 }
-@media (max-width: 47em) {
-  .main-container .first_textblock .first_textblock-title {
-    font-size: 3em;
-  }
-}
 .main-container .first_textblock .first_textblock-discr {
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   font-size: 1.5em;
   line-height: 1.2;
   margin-top: 1.2em;
   z-index: 2;
+}
+@media (max-width: 47em) {
+  .main-container .first_textblock .first_textblock-title {
+    font-size: 3em;
+  }
 }
 .main-container .cycle_textblock {
   min-height: 100vh;
@@ -530,12 +529,6 @@ code {
   justify-content: center;
   align-content: center;
 }
-@media (max-width: 47em) {
-  .main-container .cycle_textblock {
-    min-height: 40vh;
-    background-image: url('');
-  }
-}
 .main-container .cycle_textblock:before {
   content: '';
   position: absolute;
@@ -548,13 +541,6 @@ code {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media (max-width: 47em) {
-  .main-container .cycle_textblock:before {
-    z-index: -1;
-    opacity: 0.6;
-    position: relative;
-  }
-}
 .main-container .cycle_textblock .cycle_textblock-dcs {
   width: 40%;
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
@@ -562,7 +548,25 @@ code {
   line-height: 1.2;
   margin-top: 1.2em;
 }
-@media (max-width: 749px) {
+@media (max-width: 47em) {
+  .main-container .cycle_textblock {
+    min-height: 40vh;
+    background-size: cover;
+    flex-wrap: wrap;
+  }
+  .main-container .cycle_textblock:before {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 75vw;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    content: 'Life cycle';
+  }
   .main-container .cycle_textblock .cycle_textblock-dcs {
     font-size: 24px;
     width: 100%;
