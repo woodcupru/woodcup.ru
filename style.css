@@ -579,6 +579,8 @@ code {
   font-size: 5.33em;
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
   line-height: 1;
+  position: relative;
+  z-index: 3;
 }
 .main-container .sec_textblock .sec_textblock-bgc {
   position: relative;
@@ -591,7 +593,7 @@ code {
   right: 0;
   left: 0;
   top: -15vh;
-  z-index: -1;
+  z-index: 1;
 }
 .main-container .sec_textblock .sec_textblock-discr {
   font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
@@ -601,6 +603,8 @@ code {
   background-color: #fff;
   padding: 1em;
   border-radius: 1em;
+  position: relative;
+  z-index: 3;
 }
 @media (max-width: 47em) {
   .main-container .sec_textblock .sec_textblock-title {

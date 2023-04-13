@@ -295,6 +295,8 @@
             font-size: 5.33em;
             font-family: @serif;
             line-height: 1;  
+            position: relative;
+            z-index: 3;
         }
         .sec_textblock-bgc {
             position: relative;
@@ -304,7 +306,7 @@
                 width: 100%;
                 position: absolute;
                 right: 0;left: 0; top: -15vh;
-                z-index: -1;                
+                z-index: 1;                
             }
         } 
 
@@ -316,6 +318,8 @@
             background-color: #fff;
             padding: 1em;
             border-radius: 1em;
+            position: relative;
+            z-index: 3;
         }
 
     .max(48em, {
