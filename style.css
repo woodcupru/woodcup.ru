@@ -181,6 +181,8 @@ html,
 body {
   height: 100%;
   background-color: #ffeaa7;
+  overflow-x: hidden;
+  width: 100%;
 }
 html {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
@@ -394,22 +396,6 @@ code {
 .header-container .full_bg .description {
   font-size: 1.5em;
 }
-@media (max-width: 47em) {
-  .header-container .full_bg {
-    margin-bottom: 0;
-  }
-  .header-container .full_bg .logo {
-    font-size: 3em;
-    font-size: 1.6em;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: #222;
-  }
-  .header-container .full_bg .description {
-    font-size: 1em;
-    color: #222;
-  }
-}
 .header-container:before {
   content: ' ';
   position: absolute;
@@ -425,11 +411,6 @@ code {
   background-size: contain;
   background-image: url(pic/bhand.png);
 }
-@media (max-width: 47em) {
-  .header-container:before {
-    height: 20vh;
-  }
-}
 .header-container .lkly {
   position: absolute;
   bottom: 0;
@@ -441,7 +422,28 @@ code {
 }
 @media (max-width: 47em) {
   .header-container {
-    height: 80vh;
+    align-content: space-between;
+    height: 100vh;
+    background-image: url('');
+  }
+  .header-container:before {
+    position: relative;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-image: url(pic/title_blub_m.png);
+  }
+  .header-container .full_bg {
+    width: 90%;
+  }
+  .header-container .full_bg .logo {
+    font-size: 2em;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: #222;
+  }
+  .header-container .full_bg .description {
+    font-size: 1em;
+    color: #222;
   }
 }
 .main-container {
