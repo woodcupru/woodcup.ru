@@ -4,7 +4,7 @@
   font-weight: 100;
   font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/notoserifdisplay/v17/buERppa9f8_vkXaZLAgP0G5Wi6QmA1QaeYah2sovLCDq_ZgLyt3idQfktOG-PVpd49gK.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/notoserifdisplay/v18/buERppa9f8_vkXaZLAgP0G5Wi6QmA1QaeYah2sovLCDq_ZgLyt3idQfktOG-PVpd49gK.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Noto Serif Display';
@@ -12,7 +12,7 @@
   font-weight: 300;
   font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/notoserifdisplay/v17/buERppa9f8_vkXaZLAgP0G5Wi6QmA1QaeYah2sovLCDq_ZgLyt3idQfktOG-PVoD4tgK.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/notoserifdisplay/v18/buERppa9f8_vkXaZLAgP0G5Wi6QmA1QaeYah2sovLCDq_ZgLyt3idQfktOG-PVoD4tgK.ttf) format('truetype');
 }
 @font-face {
   font-family: 'PT Sans';
@@ -47,42 +47,42 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ptsansnarrow/v17/BngRUXNadjH0qYEzV7ab-oWlsYCB.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/ptsansnarrow/v18/BngRUXNadjH0qYEzV7ab-oWlsYCB.ttf) format('truetype');
 }
 @font-face {
   font-family: 'PT Sans Narrow';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ptsansnarrow/v17/BngSUXNadjH0qYEzV7ab-oWlsbg95DiC.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/ptsansnarrow/v18/BngSUXNadjH0qYEzV7ab-oWlsbg95DiC.ttf) format('truetype');
 }
 @font-face {
   font-family: 'PT Serif';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ptserif/v17/EJRTQgYoZZY2vCFuvAFTzro.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/ptserif/v18/EJRTQgYoZZY2vCFuvAFTzro.ttf) format('truetype');
 }
 @font-face {
   font-family: 'PT Serif';
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ptserif/v17/EJRQQgYoZZY2vCFuvAFT9gaQVy4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/ptserif/v18/EJRQQgYoZZY2vCFuvAFT9gaQVy4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'PT Serif';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ptserif/v17/EJRVQgYoZZY2vCFuvDFR.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/ptserif/v18/EJRVQgYoZZY2vCFuvDFR.ttf) format('truetype');
 }
 @font-face {
   font-family: 'PT Serif';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ptserif/v17/EJRSQgYoZZY2vCFuvAnt65qV.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/ptserif/v18/EJRSQgYoZZY2vCFuvAnt65qV.ttf) format('truetype');
 }
 @font-face {
   font-family: 'icomoon';
@@ -420,6 +420,15 @@ code {
   text-align: center;
   z-index: 3;
 }
+@media (max-width: 63em) {
+  .header-container {
+    background-position: 50% 50%;
+  }
+  .header-container:before {
+    background-image: unset;
+    z-index: 1;
+  }
+}
 @media (max-width: 47em) {
   .header-container {
     align-content: space-between;
@@ -431,6 +440,7 @@ code {
     background-position: 0 0;
     background-size: 100% 100%;
     background-image: url(pic/title_blub_m.png);
+    z-index: 1;
   }
   .header-container .full_bg {
     width: 90%;

@@ -122,12 +122,21 @@
       z-index: 3;
     }
 
+    .max(64em, { 
+        background-position: 50% 50%;
+        &:before { 
+            background-image: unset; 
+            z-index: 1; 
+        }
+    });
+
     .max(48em, {
          &:before { 
             position: relative;
             background-position: 0 0;
             background-size: 100% 100%;
-            background-image: url(pic/title_blub_m.png);  
+            background-image: url(pic/title_blub_m.png); 
+            z-index: 1; 
         }
 
 
@@ -136,10 +145,8 @@
     background-image: url(''); 
 
         .full_bg {
-           // margin-bottom: 10vh;
             width: 90%;
             .logo { 
-               // font-size: 3em;
                 .upper(2em); 
                 color: #222;
             }
