@@ -88,12 +88,19 @@
         margin-bottom: 20vh;
            
         .logo {
-            .upper(2em);
-            font-family: @logo;
-          //  font-family: @narrow;
-            font-size: 4em;
-            letter-spacing: 0.3em;
-           // text-transform: uppercase;  
+        //  .upper(2em);
+        //   font-family: @logo;
+        //   font-family: @narrow;
+        //   font-size: 4em;
+        //   letter-spacing: 0.3em;
+        //   text-transform: uppercase; 
+        //   color: transparent; 
+            display: block;
+            width: 60%;
+
+            &.small {
+                display: none;
+            }
         }
         
          .description {
@@ -149,8 +156,13 @@
         .full_bg {
             width: 90%;
             .logo { 
-                .upper(2em); 
-                color: #222;
+                width: 100%;
+                &.small {
+                    display: block;
+                }                
+                &.big {
+                    display: none;
+                }
             }
             .description {
                 font-size: 1em;

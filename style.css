@@ -20,6 +20,13 @@
   src: url(https://fonts.gstatic.com/s/barriecito/v17/WWXXlj-CbBOSLY2QTuY_KdU.ttf) format('truetype');
 }
 @font-face {
+  font-family: 'Barrio';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barrio/v19/wEO8EBXBk8hBIDiEdQ.ttf) format('truetype');
+}
+@font-face {
   font-family: 'PT Sans';
   font-style: italic;
   font-weight: 400;
@@ -390,12 +397,11 @@ code {
   margin-bottom: 20vh;
 }
 .header-container .full_bg .logo {
-  font-size: 2em;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  font-family: 'Barriecito', sans-serif;
-  font-size: 4em;
-  letter-spacing: 0.3em;
+  display: block;
+  width: 60%;
+}
+.header-container .full_bg .logo.small {
+  display: none;
 }
 .header-container .full_bg .description {
   font-size: 1.5em;
@@ -450,10 +456,13 @@ code {
     width: 90%;
   }
   .header-container .full_bg .logo {
-    font-size: 2em;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: #222;
+    width: 100%;
+  }
+  .header-container .full_bg .logo.small {
+    display: block;
+  }
+  .header-container .full_bg .logo.big {
+    display: none;
   }
   .header-container .full_bg .description {
     font-size: 1em;
