@@ -1,18 +1,23 @@
 @font-face {
-  font-family: 'Noto Serif Display';
+  font-family: 'Baloo 2';
   font-style: normal;
-  font-weight: 100;
-  font-stretch: normal;
+  font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/notoserifdisplay/v18/buERppa9f8_vkXaZLAgP0G5Wi6QmA1QaeYah2sovLCDq_ZgLyt3idQfktOG-PVpd49gK.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/baloo2/v16/wXK0E3kTposypRydzVT08TS3JnAmtdgazapv.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Noto Serif Display';
+  font-family: 'Baloo 2';
   font-style: normal;
-  font-weight: 300;
-  font-stretch: normal;
+  font-weight: 800;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/notoserifdisplay/v18/buERppa9f8_vkXaZLAgP0G5Wi6QmA1QaeYah2sovLCDq_ZgLyt3idQfktOG-PVoD4tgK.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/baloo2/v16/wXK0E3kTposypRydzVT08TS3JnAmtdiayqpv.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barriecito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/barriecito/v17/WWXXlj-CbBOSLY2QTuY_KdU.ttf) format('truetype');
 }
 @font-face {
   font-family: 'PT Sans';
@@ -324,10 +329,9 @@ code {
   }
 }
 #top_nav .logo {
-  font-family: 'Noto Serif Display', serif;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   font-size: 1.6em;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
 }
 #top_nav .logo span {
   position: relative;
@@ -388,10 +392,10 @@ code {
 .header-container .full_bg .logo {
   font-size: 2em;
   letter-spacing: 0.4em;
-  font-family: 'Noto Serif Display', serif;
+  text-transform: uppercase;
+  font-family: 'Barriecito', sans-serif;
   font-size: 4em;
   letter-spacing: 0.3em;
-  text-transform: uppercase;
 }
 .header-container .full_bg .description {
   font-size: 1.5em;
