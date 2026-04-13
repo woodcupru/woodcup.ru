@@ -4,7 +4,6 @@
   --bg: #23964d;
   --blob: #f7cc4f;
   --ink: #44434f;
-  --paper: #f7f7f3;
   --shadow: 0 14px 28px rgba(23, 43, 20, 0.18);
 }
 
@@ -61,26 +60,7 @@ img {
   animation: blobMorphA 13s ease-in-out infinite;
   transform-origin: 50% 50%;
   filter: drop-shadow(0 30px 50px rgba(62, 88, 35, 0.18));
-  clip-path: polygon(
-    8% 34%,
-    13% 18%,
-    27% 8%,
-    45% 4%,
-    61% 8%,
-    77% 12%,
-    90% 24%,
-    96% 40%,
-    93% 56%,
-    98% 72%,
-    92% 88%,
-    77% 96%,
-    58% 93%,
-    44% 97%,
-    27% 92%,
-    13% 83%,
-    5% 67%,
-    3% 49%
-  );
+  border-radius: 41% 59% 56% 44% / 45% 37% 63% 55%;
 }
 
 .blob::before,
@@ -97,135 +77,28 @@ img {
   inset: 9% 12% 13% 10%;
   opacity: 0.98;
   animation: blobMorphB 15s ease-in-out infinite reverse;
-  clip-path: polygon(
-    10% 38%,
-    16% 20%,
-    30% 10%,
-    46% 7%,
-    62% 10%,
-    79% 15%,
-    90% 28%,
-    93% 44%,
-    91% 58%,
-    95% 73%,
-    88% 87%,
-    74% 92%,
-    57% 89%,
-    43% 93%,
-    29% 90%,
-    17% 82%,
-    11% 67%,
-    7% 52%
-  );
+  border-radius: 58% 42% 47% 53% / 34% 53% 47% 66%;
 }
 
 .blob::after {
   inset: 12% 6% 7% 16%;
   opacity: 0.94;
   animation: blobMorphC 17s ease-in-out infinite;
-  clip-path: polygon(
-    12% 32%,
-    21% 16%,
-    37% 9%,
-    55% 8%,
-    72% 12%,
-    85% 20%,
-    93% 34%,
-    96% 49%,
-    92% 63%,
-    94% 79%,
-    84% 91%,
-    67% 95%,
-    50% 91%,
-    35% 94%,
-    22% 87%,
-    12% 75%,
-    9% 57%,
-    8% 42%
-  );
+  border-radius: 46% 54% 39% 61% / 57% 42% 58% 43%;
 }
 
 .blob-wrap::before {
   inset: 6% 20% 18% 4%;
   opacity: 0.82;
   animation: blobMorphD 19s ease-in-out infinite reverse;
-  clip-path: polygon(
-    14% 45%,
-    18% 23%,
-    34% 11%,
-    53% 10%,
-    69% 13%,
-    84% 24%,
-    89% 41%,
-    86% 58%,
-    90% 74%,
-    80% 87%,
-    62% 88%,
-    48% 92%,
-    31% 89%,
-    18% 77%,
-    11% 62%
-  );
+  border-radius: 52% 48% 60% 40% / 44% 35% 65% 56%;
 }
 
 .blob-wrap::after {
   inset: 20% 10% 4% 22%;
   opacity: 0.78;
   animation: blobMorphE 16s ease-in-out infinite;
-  clip-path: polygon(
-    10% 28%,
-    25% 12%,
-    46% 8%,
-    63% 11%,
-    78% 20%,
-    90% 35%,
-    93% 54%,
-    88% 72%,
-    74% 84%,
-    56% 90%,
-    36% 88%,
-    21% 79%,
-    11% 62%,
-    7% 43%
-  );
-}
-
-.centerpiece {
-  position: absolute;
-  inset: 50% auto auto 50%;
-  width: min(640px, 72vw);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 5;
-}
-
-.status {
-  margin: 0 0 18px;
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-h1 {
-  margin: 0;
-  font-family: "PT Serif", serif;
-  font-size: clamp(3.1rem, 8vw, 4rem);
-  font-weight: 400;
-  letter-spacing: 0.18em;
-}
-
-.subtitle {
- /* max-width: 18ch;*/
-  margin: 14px auto 0;
-  font-size: clamp(1.35rem, 2.4vw, 2.1rem);
-  line-height: 1.22;
-}
-
-.note {
-  max-width: 34rem;
-  margin: 28px auto 0;
-  font-size: clamp(1rem, 1.45vw, 1.15rem);
-  line-height: 1.55;
+  border-radius: 38% 62% 49% 51% / 50% 34% 66% 50%;
 }
 
 .cycle-ring {
@@ -244,97 +117,121 @@ h1 {
   filter: drop-shadow(0 20px 30px rgba(23, 43, 20, 0.12));
 }
 
+.centerpiece {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(640px, 72vw);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+}
+
+h1 {
+  margin: 0;
+  font-family: "PT Serif", serif;
+  font-size: clamp(3.1rem, 8vw, 4rem);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+}
+
+.subtitle {
+  margin: 14px auto 0;
+  font-size: clamp(1.35rem, 2.4vw, 2.1rem);
+  line-height: 1.22;
+}
+
 @keyframes blobMorphA {
   0% {
-    clip-path: polygon(8% 34%, 13% 18%, 27% 8%, 45% 4%, 61% 8%, 77% 12%, 90% 24%, 96% 40%, 93% 56%, 98% 72%, 92% 88%, 77% 96%, 58% 93%, 44% 97%, 27% 92%, 13% 83%, 5% 67%, 3% 49%);
+    border-radius: 41% 59% 56% 44% / 45% 37% 63% 55%;
     transform: rotate(0deg) scale(1);
   }
 
   25% {
-    clip-path: polygon(7% 29%, 16% 14%, 31% 7%, 48% 6%, 66% 10%, 80% 16%, 91% 30%, 94% 44%, 90% 58%, 96% 73%, 89% 89%, 71% 95%, 54% 90%, 40% 95%, 24% 90%, 11% 77%, 4% 61%, 4% 43%);
+    border-radius: 55% 45% 48% 52% / 39% 55% 45% 61%;
     transform: rotate(2deg) scale(1.03);
   }
 
   50% {
-    clip-path: polygon(10% 38%, 14% 20%, 26% 10%, 42% 8%, 60% 6%, 79% 12%, 91% 24%, 97% 43%, 92% 60%, 95% 76%, 87% 90%, 72% 94%, 55% 91%, 41% 95%, 25% 88%, 12% 79%, 7% 64%, 5% 49%);
+    border-radius: 47% 53% 60% 40% / 58% 40% 60% 42%;
     transform: rotate(-3deg) scale(0.98);
   }
 
   75% {
-    clip-path: polygon(9% 31%, 18% 16%, 34% 9%, 51% 9%, 67% 13%, 83% 20%, 93% 34%, 94% 49%, 89% 64%, 94% 80%, 84% 91%, 66% 94%, 50% 89%, 35% 91%, 21% 85%, 11% 72%, 8% 55%, 6% 41%);
+    border-radius: 60% 40% 43% 57% / 47% 36% 64% 53%;
     transform: rotate(2deg) scale(1.04);
   }
 
   100% {
-    clip-path: polygon(8% 34%, 13% 18%, 27% 8%, 45% 4%, 61% 8%, 77% 12%, 90% 24%, 96% 40%, 93% 56%, 98% 72%, 92% 88%, 77% 96%, 58% 93%, 44% 97%, 27% 92%, 13% 83%, 5% 67%, 3% 49%);
+    border-radius: 41% 59% 56% 44% / 45% 37% 63% 55%;
     transform: rotate(0deg) scale(1);
   }
 }
 
 @keyframes blobMorphB {
   0% {
-    clip-path: polygon(10% 38%, 16% 20%, 30% 10%, 46% 7%, 62% 10%, 79% 15%, 90% 28%, 93% 44%, 91% 58%, 95% 73%, 88% 87%, 74% 92%, 57% 89%, 43% 93%, 29% 90%, 17% 82%, 11% 67%, 7% 52%);
+    border-radius: 58% 42% 47% 53% / 34% 53% 47% 66%;
     transform: rotate(-2deg) scale(1);
   }
 
   50% {
-    clip-path: polygon(8% 33%, 18% 18%, 33% 12%, 49% 10%, 66% 12%, 82% 18%, 90% 33%, 91% 47%, 87% 62%, 91% 77%, 84% 88%, 69% 90%, 54% 85%, 39% 89%, 24% 86%, 14% 74%, 9% 60%, 7% 45%);
+    border-radius: 44% 56% 55% 45% / 43% 63% 37% 57%;
     transform: rotate(3deg) scale(1.03);
   }
 
   100% {
-    clip-path: polygon(10% 38%, 16% 20%, 30% 10%, 46% 7%, 62% 10%, 79% 15%, 90% 28%, 93% 44%, 91% 58%, 95% 73%, 88% 87%, 74% 92%, 57% 89%, 43% 93%, 29% 90%, 17% 82%, 11% 67%, 7% 52%);
+    border-radius: 58% 42% 47% 53% / 34% 53% 47% 66%;
     transform: rotate(-2deg) scale(1);
   }
 }
 
 @keyframes blobMorphC {
   0% {
-    clip-path: polygon(12% 32%, 21% 16%, 37% 9%, 55% 8%, 72% 12%, 85% 20%, 93% 34%, 96% 49%, 92% 63%, 94% 79%, 84% 91%, 67% 95%, 50% 91%, 35% 94%, 22% 87%, 12% 75%, 9% 57%, 8% 42%);
+    border-radius: 46% 54% 39% 61% / 57% 42% 58% 43%;
     transform: rotate(1deg) scale(1);
   }
 
   50% {
-    clip-path: polygon(14% 27%, 24% 14%, 40% 8%, 58% 10%, 74% 16%, 87% 26%, 93% 39%, 94% 54%, 89% 69%, 90% 83%, 79% 92%, 62% 93%, 47% 87%, 31% 90%, 19% 82%, 11% 69%, 9% 52%, 10% 38%);
+    border-radius: 61% 39% 52% 48% / 49% 34% 66% 51%;
     transform: rotate(-4deg) scale(1.02);
   }
 
   100% {
-    clip-path: polygon(12% 32%, 21% 16%, 37% 9%, 55% 8%, 72% 12%, 85% 20%, 93% 34%, 96% 49%, 92% 63%, 94% 79%, 84% 91%, 67% 95%, 50% 91%, 35% 94%, 22% 87%, 12% 75%, 9% 57%, 8% 42%);
+    border-radius: 46% 54% 39% 61% / 57% 42% 58% 43%;
     transform: rotate(1deg) scale(1);
   }
 }
 
 @keyframes blobMorphD {
   0% {
-    clip-path: polygon(14% 45%, 18% 23%, 34% 11%, 53% 10%, 69% 13%, 84% 24%, 89% 41%, 86% 58%, 90% 74%, 80% 87%, 62% 88%, 48% 92%, 31% 89%, 18% 77%, 11% 62%);
+    border-radius: 52% 48% 60% 40% / 44% 35% 65% 56%;
     transform: rotate(-6deg) scale(1);
   }
 
   50% {
-    clip-path: polygon(11% 40%, 21% 21%, 38% 12%, 56% 12%, 73% 17%, 85% 29%, 87% 45%, 82% 61%, 85% 77%, 73% 88%, 56% 86%, 43% 89%, 27% 84%, 16% 71%, 11% 55%);
+    border-radius: 39% 61% 51% 49% / 54% 42% 58% 46%;
     transform: rotate(5deg) scale(1.05);
   }
 
   100% {
-    clip-path: polygon(14% 45%, 18% 23%, 34% 11%, 53% 10%, 69% 13%, 84% 24%, 89% 41%, 86% 58%, 90% 74%, 80% 87%, 62% 88%, 48% 92%, 31% 89%, 18% 77%, 11% 62%);
+    border-radius: 52% 48% 60% 40% / 44% 35% 65% 56%;
     transform: rotate(-6deg) scale(1);
   }
 }
 
 @keyframes blobMorphE {
   0% {
-    clip-path: polygon(10% 28%, 25% 12%, 46% 8%, 63% 11%, 78% 20%, 90% 35%, 93% 54%, 88% 72%, 74% 84%, 56% 90%, 36% 88%, 21% 79%, 11% 62%, 7% 43%);
+    border-radius: 38% 62% 49% 51% / 50% 34% 66% 50%;
     transform: rotate(4deg) scale(1);
   }
 
   50% {
-    clip-path: polygon(13% 24%, 28% 11%, 49% 10%, 67% 15%, 82% 26%, 91% 41%, 91% 58%, 83% 75%, 67% 84%, 49% 86%, 31% 81%, 17% 69%, 9% 53%, 8% 37%);
+    border-radius: 57% 43% 41% 59% / 40% 57% 43% 60%;
     transform: rotate(-5deg) scale(1.04);
   }
 
   100% {
-    clip-path: polygon(10% 28%, 25% 12%, 46% 8%, 63% 11%, 78% 20%, 90% 35%, 93% 54%, 88% 72%, 74% 84%, 56% 90%, 36% 88%, 21% 79%, 11% 62%, 7% 43%);
+    border-radius: 38% 62% 49% 51% / 50% 34% 66% 50%;
     transform: rotate(4deg) scale(1);
   }
 }
@@ -360,11 +257,6 @@ h1 {
   h1 {
     letter-spacing: 0.12em;
   }
-
-  .subtitle {
-    max-width: 16ch;
-  }
-
 }
 
 @media (max-width: 640px) {
@@ -388,16 +280,7 @@ h1 {
     top: 50%;
   }
 
-  .status {
-    margin-bottom: 12px;
-  }
-
   .subtitle {
     font-size: 1.2rem;
-  }
-
-  .note {
-    margin-top: 22px;
-    font-size: 0.98rem;
   }
 }
