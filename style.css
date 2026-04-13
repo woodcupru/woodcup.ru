@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&display=swap");
 
 :root {
-  --bg: #23964d;
+  --bg: #1f1f1f;
   --blob: #f7cc4f;
   --ink: #44434f;
   --shadow: 0 14px 28px rgba(23, 43, 20, 0.18);
