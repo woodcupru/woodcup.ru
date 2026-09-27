@@ -56,11 +56,9 @@
 
       <section class="scene scene--intro" id="intro" aria-labelledby="intro-title">
         <div class="scene__content intro-content">
-          <h1 id="intro-title">100% bio-based<br>and biodegradable<br>disposable cutlery</h1>
+          <h1 id="intro-title"><span class="hand">100%</span>bio-based and biodegradable<br>disposable cutlery</h1>
         </div>
       </section>
-
-      <section class="scene scene--origin" id="origin" aria-label="BERЁZKA">&nbsp;</section>
 
       <section class="scene scene--cycle" id="cycle" aria-labelledby="cycle-title">
         <div class="cycle-diagram" aria-hidden="true">
@@ -68,9 +66,28 @@
         </div>
         <div class="scene__content cycle-content">
           <h2 id="cycle-title">Circular</h2>
+          <p class="cycle-content__tagline">Grow ∙ Use ∙ Compost ∙ Repeat</p>
         </div>
       </section>
+
+      <section class="scene scene--origin" id="origin" aria-label="BERЁZKA">
+        <div class="scene__content origin-content">
+          <p class="origin-content__note">The startup did not take off.</p>
+          <div class="origin-content__links">
+            <a href="https://www.linkedin.com/company/woodcup" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:i@nikolaisemenov.com">i@nikolaisemenov.com</a>
+          </div>
+        </div>
+      </section>
+
     </main>
+
+    <nav class="scene-nav" aria-label="Page sections">
+      <button type="button" data-scene-index="0" aria-label="Go to material" aria-current="true"></button>
+      <button type="button" data-scene-index="1" aria-label="Go to bio-based cutlery"></button>
+      <button type="button" data-scene-index="2" aria-label="Go to circular economy"></button>
+      <button type="button" data-scene-index="3" aria-label="Go to project update"></button>
+    </nav>
 
     <section class="screenreader-content" aria-labelledby="about-woodcup">
       <h2 id="about-woodcup">WOODcup and BERЁZKA biodegradable disposable tableware</h2>
