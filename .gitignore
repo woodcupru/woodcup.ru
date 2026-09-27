@@ -1,2 +1,5 @@
 archive/
 .DS_Store
+layout/
+pics/
+node_modules/
