@@ -277,7 +277,8 @@ h1 {
 }
 
 .scene--cycle {
-  --scene-image: url("../assets/images/f1 1.png");
+// --scene-image: url("../assets/images/f1 1.png");
+  --scene-image: url("../assets/images/paper.png");
 }
 
 .cycle-diagram {
@@ -289,7 +290,7 @@ h1 {
   transform: translate3d(-50%, -50%, 0);
   pointer-events: none;
    border-radius: 41% 59% 56% 44% / 45% 37% 63% 55%;
-  background-color: rgba(#000, 0.2);
+  // background-color: rgba(#000, 0.2);
   img {
     display: block;
     width: 100%;
