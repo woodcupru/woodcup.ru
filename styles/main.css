@@ -209,6 +209,24 @@ h1 {
 
 .scene--origin {
   --scene-image: url("../assets/images/side_bg.jpeg");
+  --tree-color: #fffdf8;
+  --tree-height: 40%;
+  --tree-draw-duration: 2.2s;
+}
+
+.origin-tree {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: auto;
+  height: var(--tree-height);
+  max-width: 80%;
+  aspect-ratio: 374/476;
+  color: var(--tree-color);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .origin-content {

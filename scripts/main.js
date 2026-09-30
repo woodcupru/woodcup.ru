@@ -1,6 +1,8 @@
 (() => {
   const scenes = [...document.querySelectorAll('.scene')];
   const navButtons = [...document.querySelectorAll('[data-scene-index]')];
+  const treeLine = document.querySelector('#tree-line');
+  let treeAnimation;
   const PREVIEW_COMMIT_POINT = 0.58;
   const PREVIEW_SENSITIVITY = 120;
   const WHEEL_END_DELAY = 170;
@@ -19,6 +21,32 @@
   let touchStartY = null;
 
   document.documentElement.classList.add('has-motion');
+
+  const drawTree = () => {
+    if (!treeLine) return;
+
+    const pathLength = treeLine.getTotalLength();
+    treeAnimation?.cancel();
+    treeLine.style.strokeDasharray = String(pathLength);
+    treeLine.style.strokeDashoffset = String(pathLength);
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      treeLine.style.strokeDashoffset = '0';
+      return;
+    }
+
+    const duration = Number.parseFloat(getComputedStyle(treeLine).getPropertyValue('--tree-draw-duration')) * 1000 || 2200;
+
+    window.requestAnimationFrame(() => {
+      treeAnimation = treeLine.animate(
+        [
+          { strokeDashoffset: String(pathLength) },
+          { strokeDashoffset: '0' },
+        ],
+        { duration, easing: 'linear', fill: 'forwards' },
+      );
+    });
+  };
 
   const render = () => {
     scenes.forEach((scene, index) => {
@@ -77,6 +105,7 @@
     currentIndex = nextIndex;
     isTransitioning = true;
     render();
+    if (incomingScene.id === 'origin') drawTree();
     window.history.replaceState(null, '', `#${scenes[currentIndex].id}`);
 
     window.clearTimeout(transitionTimer);
@@ -261,4 +290,5 @@
   });
 
   render();
+  if (scenes[currentIndex]?.id === 'origin') drawTree();
 })();
