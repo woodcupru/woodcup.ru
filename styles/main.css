@@ -209,6 +209,9 @@ h1 {
 
 .scene--partners {
   --scene-image: url("../assets/images/paper_2.webp");
+  --tree-color: #3d3327;
+  --tree-height: 40%;
+  --tree-draw-duration: 1.5s;
 }
 
 .partners-wall {
@@ -249,9 +252,6 @@ h1 {
 
 .scene--origin {
   --scene-image: url("../assets/images/side_bg.jpeg");
-  --tree-color: #fffdf8;
-  --tree-height: 40%;
-  --tree-draw-duration: 1.5s;
 }
 
 .scene.is-active.scene--origin::after {
@@ -372,8 +372,8 @@ h1 {
     --scene-position: 56% center;
   }
   .partners-wall__logo {
-    width: min(var(--size), 38vw);
-    height: clamp(3rem, 16vw, 5rem);
+    width: min(var(--size), 28vw);
+    height: clamp(2.5rem, 10vw, 4rem);
     padding: 0.35rem;
   }
   .cycle-diagram {

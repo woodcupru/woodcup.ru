@@ -68,22 +68,23 @@
     const isMobile = window.matchMedia('(max-width: 44rem)').matches;
     const slots = isMobile
       ? [
-          [25, 19], [75, 19],
-          [25, 48], [75, 48],
-          [25, 77], [75, 77],
+          [[15, 22], [12, 17]], [[46, 54], [12, 17]], [[78, 85], [12, 17]],
+          [[15, 22], [83, 88]], [[46, 54], [83, 88]], [[78, 85], [83, 88]],
         ]
       : [
-          [18, 23], [52, 18], [81, 29],
-          [28, 53], [73, 55], [49, 78],
+          [[12, 26], [12, 26]], [[71, 85], [12, 27]],
+          [[9, 23], [34, 47]], [[9, 23], [63, 78]],
+          [[77, 89], [35, 49]], [[77, 89], [63, 78]],
         ];
 
-    shuffle(slots).forEach(([x, y], index) => {
+    shuffle(slots).forEach(([[xMin, xMax], [yMin, yMax]], index) => {
       const logo = partnerLogos[index];
-      const offset = isMobile ? 2 : 4;
       const rotation = Math.round((Math.random() * 16 - 8) * 10) / 10;
+      const x = xMin + Math.random() * (xMax - xMin);
+      const y = yMin + Math.random() * (yMax - yMin);
 
-      logo.style.setProperty('--x', `${x + Math.random() * offset * 2 - offset}%`);
-      logo.style.setProperty('--y', `${y + Math.random() * offset * 2 - offset}%`);
+      logo.style.setProperty('--x', `${x}%`);
+      logo.style.setProperty('--y', `${y}%`);
       logo.style.setProperty('--rotation', `${rotation}deg`);
     });
   };
@@ -122,7 +123,7 @@
     window.clearTimeout(transitionTimer);
     resetSceneAnimationClasses();
     render();
-    if (scenes[currentIndex]?.id === 'origin') drawTree();
+    if (scenes[currentIndex]?.id === 'partners') drawTree();
   };
 
   const startTransition = (targetIndex, fromPreview = false) => {
@@ -145,8 +146,10 @@
 
     currentIndex = nextIndex;
     isTransitioning = true;
-    if (incomingScene.id === 'origin') prepareTree();
-    if (incomingScene.id === 'partners') scatterPartnerLogos();
+    if (incomingScene.id === 'partners') {
+      prepareTree();
+      scatterPartnerLogos();
+    }
     render();
     window.history.replaceState(null, '', `#${scenes[currentIndex].id}`);
 
@@ -332,6 +335,6 @@
   });
 
   render();
-  if (scenes[currentIndex]?.id === 'origin') drawTree();
+  if (scenes[currentIndex]?.id === 'partners') drawTree();
   if (scenes[currentIndex]?.id === 'partners') scatterPartnerLogos();
 })();
