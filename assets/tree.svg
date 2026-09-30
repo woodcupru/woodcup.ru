@@ -2,7 +2,7 @@
   <title>Tree drawn in one continuous line</title>
   <g transform="translate(-369.227325 -110.374216)">
     <g transform="matrix(1.627593 -0.229904 0.229904 1.627593 -351.539961 37.73373)">
-      <path id="tree-line" pathLength="1" d="
+      <path id="tree-line" d="
         M 500 404
         C 502 385 505 367 507 349
         C 503 348 500 346 500 341

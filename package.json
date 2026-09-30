@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build:css": "sass styles/main.scss styles/main.css --no-source-map",
-    "watch:css": "sass --watch styles/main.scss:styles/main.css"
+    "watch:css": "sass --watch styles/main.scss:styles/main.css",
+    "optimize:png": "oxipng -o 4 --strip safe --recursive assets/images"
   },
   "devDependencies": {
     "sass": "^1.93.2"

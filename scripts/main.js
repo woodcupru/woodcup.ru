@@ -2,6 +2,7 @@
   const scenes = [...document.querySelectorAll('.scene')];
   const navButtons = [...document.querySelectorAll('[data-scene-index]')];
   const treeLine = document.querySelector('#tree-line');
+  const partnerLogos = [...document.querySelectorAll('.partners-wall__logo')];
   let treeAnimation;
   const PREVIEW_COMMIT_POINT = 0.58;
   const PREVIEW_SENSITIVITY = 120;
@@ -22,7 +23,7 @@
 
   document.documentElement.classList.add('has-motion');
 
-  const drawTree = () => {
+  const prepareTree = () => {
     if (!treeLine) return;
 
     const pathLength = treeLine.getTotalLength();
@@ -30,10 +31,12 @@
     treeLine.style.strokeDasharray = String(pathLength);
     treeLine.style.strokeDashoffset = String(pathLength);
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      treeLine.style.strokeDashoffset = '0';
-      return;
-    }
+    return pathLength;
+  };
+
+  const drawTree = () => {
+    const pathLength = prepareTree();
+    if (!pathLength || !treeLine) return;
 
     const duration = Number.parseFloat(getComputedStyle(treeLine).getPropertyValue('--tree-draw-duration')) * 1000 || 2200;
 
@@ -45,6 +48,43 @@
         ],
         { duration, easing: 'linear', fill: 'forwards' },
       );
+    });
+  };
+
+  const shuffle = (items) => {
+    const shuffled = [...items];
+
+    for (let index = shuffled.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1));
+      [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+    }
+
+    return shuffled;
+  };
+
+  const scatterPartnerLogos = () => {
+    if (!partnerLogos.length) return;
+
+    const isMobile = window.matchMedia('(max-width: 44rem)').matches;
+    const slots = isMobile
+      ? [
+          [25, 19], [75, 19],
+          [25, 48], [75, 48],
+          [25, 77], [75, 77],
+        ]
+      : [
+          [18, 23], [52, 18], [81, 29],
+          [28, 53], [73, 55], [49, 78],
+        ];
+
+    shuffle(slots).forEach(([x, y], index) => {
+      const logo = partnerLogos[index];
+      const offset = isMobile ? 2 : 4;
+      const rotation = Math.round((Math.random() * 16 - 8) * 10) / 10;
+
+      logo.style.setProperty('--x', `${x + Math.random() * offset * 2 - offset}%`);
+      logo.style.setProperty('--y', `${y + Math.random() * offset * 2 - offset}%`);
+      logo.style.setProperty('--rotation', `${rotation}deg`);
     });
   };
 
@@ -82,6 +122,7 @@
     window.clearTimeout(transitionTimer);
     resetSceneAnimationClasses();
     render();
+    if (scenes[currentIndex]?.id === 'origin') drawTree();
   };
 
   const startTransition = (targetIndex, fromPreview = false) => {
@@ -104,8 +145,9 @@
 
     currentIndex = nextIndex;
     isTransitioning = true;
+    if (incomingScene.id === 'origin') prepareTree();
+    if (incomingScene.id === 'partners') scatterPartnerLogos();
     render();
-    if (incomingScene.id === 'origin') drawTree();
     window.history.replaceState(null, '', `#${scenes[currentIndex].id}`);
 
     window.clearTimeout(transitionTimer);
@@ -291,4 +333,5 @@
 
   render();
   if (scenes[currentIndex]?.id === 'origin') drawTree();
+  if (scenes[currentIndex]?.id === 'partners') scatterPartnerLogos();
 })();
